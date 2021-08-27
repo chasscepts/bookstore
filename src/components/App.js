@@ -1,5 +1,13 @@
+import BooksForm from '../containers/BooksForm';
+import BooksList from '../containers/BooksList';
+
 function App() {
-  return <h1>Magic Bookstore</h1>;
+  return (
+    <div>
+      <BooksList />
+      <BooksForm />
+    </div>
+  );
 }
 
 export default App;
