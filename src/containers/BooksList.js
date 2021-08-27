@@ -1,9 +1,8 @@
-//  import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Book from '../components/Book';
 
 export default function BooksList() {
-  //  const books = useSelector((state) => state.books);
-  const books = [];
+  const books = useSelector((state) => state.books);
 
   return (
     <table>
