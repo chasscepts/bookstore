@@ -13,7 +13,7 @@ const initialState = [
   { id: Math.random(), title: 'Book 3', category: 'History' },
 ];
 
-const store = createStore(reducer, { books: initialState, filter: 'All' });
+const store = createStore(reducer, { books: initialState });
 
 ReactDOM.render(
   <React.StrictMode>
