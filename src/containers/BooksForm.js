@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions';
-
-const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+import categories from '../utilities/categories';
 
 function BooksForm({ createBook }) {
   const [title, setTitle] = useState('');
