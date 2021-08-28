@@ -6,6 +6,8 @@ import { removeBook } from '../actions';
 function BooksList({ removeBook }) {
   const books = useSelector((state) => state.books);
 
+  const handleRemoveBook = (book) => removeBook(book);
+
   return (
     <table>
       <thead>
@@ -17,7 +19,7 @@ function BooksList({ removeBook }) {
       </thead>
       <tbody>
         {books.map(
-          (book) => <Book key={book.id} book={book} removeBook={removeBook} />,
+          (book) => <Book key={book.id} book={book} removeBook={handleRemoveBook} />,
         )}
       </tbody>
     </table>
