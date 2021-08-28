@@ -4,9 +4,7 @@ import categories from '../utilities/categories';
 const filters = ['All', ...categories];
 
 export default function CategoryFilter({ filter, changeFilter }) {
-  const handleFilterChange = (evt) => {
-    changeFilter(evt.target.value);
-  };
+  const handleFilterChange = (evt) => changeFilter(evt.target.value);
 
   return (
     <select value={filter} onChange={handleFilterChange}>
