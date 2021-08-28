@@ -8,12 +8,13 @@ function BooksForm({ createBook }) {
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState(categories[0]);
 
-  const handleTextChange = (evt) => {
-    setTitle(evt.target.value);
-  };
-
-  const handleSelectionChange = (evt) => {
-    setCategory(evt.target.value);
+  const handleChange = (evt) => {
+    const { name, value } = evt.target;
+    if (name === 'title') {
+      setTitle(value);
+    } else if (name === 'category') {
+      setCategory(value);
+    }
   };
 
   const handleSubmit = (evt) => {
@@ -26,8 +27,8 @@ function BooksForm({ createBook }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" value={title} onChange={handleTextChange} />
-      <select value={category} onChange={handleSelectionChange}>
+      <input name="title" type="text" value={title} onChange={handleChange} />
+      <select name="category" value={category} onChange={handleChange}>
         {
           categories.map((category) => <option key={category} value={category}>{category}</option>)
         }
