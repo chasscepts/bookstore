@@ -4,6 +4,8 @@
 
 > A fast, dynamic and responsive web application built with React and Redux for organizing and managing a bookstore.
 
+![screenshot](./app_screenshot.png)
+
 ## Built With
 
 - React
