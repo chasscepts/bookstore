@@ -31,6 +31,7 @@ const styles = {
     textTransform: 'uppercase',
   },
   user: {
+    height: '2.813rem',
     color: '#0290ff',
     padding: '0.875rem',
     border: 'solid 1px #e8e8e8',
@@ -64,7 +65,7 @@ const styles = {
     color: '#121212',
   },
   currentChapterWrap: {
-    marginLeft: '2rem',
+
   },
   currentChapterLabel: {
     textTransform: 'uppercase',
@@ -96,19 +97,23 @@ const styles = {
     textAlign: 'center',
     color: '#fff',
   },
+  separator: {
+    width: '1px',
+    height: '4.375rem',
+    borderLeft: '1px solid #e8e8e8',
+    margin: '0 2rem',
+  },
 };
 
 function Status() {
   const percent = Math.floor(101 * Math.random());
 
   return (
-    <div>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <CircularProgressBar percent={percent} />
-        <div>
-          <div style={styles.percentComplete}>{`${percent}%`}</div>
-          <div style={styles.completed}>Completed</div>
-        </div>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <CircularProgressBar percent={percent} />
+      <div>
+        <div style={styles.percentComplete}>{`${percent}%`}</div>
+        <div style={styles.completed}>Completed</div>
       </div>
     </div>
   );
@@ -154,6 +159,7 @@ function BooksList({ removeBook, changeFilter }) {
               <Book book={book} removeBook={handleRemoveBook} />
               <div style={styles.statusWrap}>
                 <Status />
+                <div style={styles.separator} />
                 <ChapterProgress />
               </div>
             </div>
