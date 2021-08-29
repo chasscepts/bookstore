@@ -12,6 +12,7 @@ const button = {
   border: 'none',
   padding: 0,
   outline: 'none',
+  backgroundColor: '#fff',
   cursor: 'pointer',
 };
 
